@@ -23,8 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
-
+gem 'image_processing', '~> 1.2'
+gem "active_storage_variant"
 # Installed gems
 gem 'factory_bot'
 gem 'simple_form'
@@ -32,6 +32,12 @@ gem 'kaminari'
 gem 'cancancan'
 gem 'devise'
 gem 'leaflet-rails'
+gem "cpf_cnpj"
+gem 'ransack'
+gem 'cocoon'
+gem 'ckeditor'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 gem 'bootstrap', '~> 5.1.0'
 gem "rspec-rails", group: [:development, :test]
 
@@ -42,6 +48,11 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rubocop-rails', require: false
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'pry-rails'
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
 
 group :development do
@@ -53,6 +64,7 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
 end
 
 group :test do
@@ -65,3 +77,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "pg", :group => :production
