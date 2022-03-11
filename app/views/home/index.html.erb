@@ -1,1 +1,37 @@
 Página inicial
+
+<p id="notice"><%= notice %></p>
+
+<h1>Empresas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nomeempresa</th>
+      <th>Nomeresponsavel</th>
+      <th>Categoria</th>
+      <th>Cep</th>
+      <th>Endereco</th>
+      <th>Bairro</th>
+      <th>Telefone</th>
+      <th>Descricao</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @empresas.each do |empresa| %>
+      <tr>
+        <td><%= empresa.nomeEmpresa %></td>
+        <td><%= empresa.nomeResponsavel %></td>
+        <td><%= empresa.categoria %></td>
+        <td><%= empresa.cep %></td>
+        <td><%= empresa.endereco %></td>
+        <td><%= empresa.bairro %></td>
+        <td><%= empresa.telefone %></td>
+        <td><%= empresa.descricao %></td>
+        <td><%= link_to 'Show', empresa %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
